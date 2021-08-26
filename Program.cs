@@ -26,7 +26,8 @@ builder.Services.AddAuthentication(OpenIdConnectDefaults.AuthenticationScheme)
 
 builder.Services.Configure<OpenIdConnectOptions>(OpenIdConnectDefaults.AuthenticationScheme, x =>
 {
-    x.TokenValidationParameters.ValidIssuers = new[] { "https://login.microsoftonline.com/98a34a88-7940-40e8-af71-913452037f31/v2.0", "https://login.microsoftonline.com/55193a41-5b56-4f8a-913a-20087af59ae9/v2.0" };
+    x.TokenValidationParameters.ValidIssuer = "https://login.microsoftonline.com/jpda.onmicrosoft.com/v2.0";
+    //x.TokenValidationParameters.ValidIssuers = new[] { "https://login.microsoftonline.com/98a34a88-7940-40e8-af71-913452037f31/v2.0", "https://login.microsoftonline.com/55193a41-5b56-4f8a-913a-20087af59ae9/v2.0" };
     x.ResponseType = "code";
 });
 
